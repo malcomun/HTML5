@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<title>Basics 1</title>
+	<script>
+	function overlay() {
+		el = document.getElementById("dialogo");
+		el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	}
+</script>
 </head>
 <body>
 	<h1>Title 1<h1>
 	<h2>SubTitle</h2>
 	<p>This is the content about Subtitle 1</p>
+	<a href='#' onclick='overlay()'>Click here to show the overlay</a>
+	<div id="dialogo">
+		<div>
+          <p>Content you want the user to see goes here.</p>
+		  Click here to [<a href='#' onclick='overlay()'>close</a>]
+		</div>
+	</div>
 	
 </body>
 </html>
